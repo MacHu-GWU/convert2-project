@@ -76,7 +76,7 @@ Process date::
 
 More Usage Example
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-To know about more built-in convert API, please read :model:`this API document <convert2.convert>`.
+To know about more built-in convert API, please read :mod:`this api document <convert2.converter>`.
 
 And more examples can be found in unit test code.
 

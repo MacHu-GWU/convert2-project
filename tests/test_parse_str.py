@@ -38,11 +38,6 @@ def test_parse_str():
     # datetime, np.datetime64, pd.tslib.Timestamp
     assert any2str(
         datetime(1970, 1, 1, 0, 0, 0, tzinfo=utc)) == "1970-01-01 00:00:00+00:00"
-    if PY3:
-        pass
-    else:
-        assert any2str(
-            np.datetime64("1970-01-01 00:00:01Z")) == "1970-01-01T00:00:01"
     assert any2str(
         pd.tslib.Timestamp("1970-01-01 00:00:01Z")) == "1970-01-01 00:00:01+00:00"
 
