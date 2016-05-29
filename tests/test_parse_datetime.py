@@ -2,8 +2,8 @@
 # -*- coding: utf-8 -*-
 
 from convert2 import any2datetime
-from convert2.lib.rolex import utc
-from convert2.lib.six import PY3
+from convert2.packages.rolex import utc
+from convert2.packages.six import PY3
 import pytest
 import numpy as np
 import pandas as pd

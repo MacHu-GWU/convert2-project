@@ -93,19 +93,18 @@ If you don't want this feature and worry about mistakes, you can call this to di
 
 More Usage Example
 --------------------------------------------------------------------------------
+To know about more built-in convert API, please read :model:`this API document <convert2.convert>`.
 
 So for more examples about ``parse_float``, ``parse_str``, ``parse_datetime``, ``parse_date``, go check these links:
 
-- `parse_int example <https://github.com/MacHu-GWU/typarse-project/blob/master/typarse/tests/test_parse.py>`_
-- `parse_float example <https://github.com/MacHu-GWU/typarse-project/blob/master/typarse/tests/test_parse.py>`_
-- `parse_str example <https://github.com/MacHu-GWU/typarse-project/blob/master/typarse/tests/test_parse.py>`_
-- `parse_datetime example <https://github.com/MacHu-GWU/typarse-project/blob/master/typarse/tests/test_parse.py>`_
-- `parse_date example <https://github.com/MacHu-GWU/typarse-project/blob/master/typarse/tests/test_parse.py>`_
+- `any2int example <https://github.com/MacHu-GWU/convert2-project/blob/master/tests/test_parse_int.py>`_
+- `any2float example <https://github.com/MacHu-GWU/convert2-project/blob/master/tests/test_parse_float.py>`_
+- `any2str example <https://github.com/MacHu-GWU/convert2-project/blob/master/tests/test_parse_str.py>`_
+- `any2datetime example <https://github.com/MacHu-GWU/convert2-project/blob/master/tests/test_parse_datetime.py>`_
+- `any2date example <https://github.com/MacHu-GWU/convert2-project/blob/master/tests/test_parse_date.py>`_
 
-For `datetime` and `date` parser, if my parser doens't recognize the format, you can:
+If it's not able to parse `datetime` or `date` from string, you can: `submit issue, request more template <https://github.com/MacHu-GWU/rolex-project/issues>`_.
 
-1. `submit issue, request more template <https://github.com/MacHu-GWU/typarse-project/issues>`_ 
-2. add your own template to the `source code <https://github.com/MacHu-GWU/typarse-project/blob/master/typarse/timewrapper.py>`_. `datetime` format reference is `here <https://docs.python.org/2/library/datetime.html#strftime-and-strptime-behavior>`_.
 
 .. _install:
 

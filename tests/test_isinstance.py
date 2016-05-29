@@ -10,7 +10,7 @@ from __future__ import print_function
 from datetime import datetime, date, timedelta
 import numpy as np
 import pandas as pd
-from convert2.lib.six import PY3, PY2
+from convert2.packages.six import PY3, PY2
 
 
 def test_is_int():

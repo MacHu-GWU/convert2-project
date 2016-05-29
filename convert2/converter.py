@@ -6,14 +6,14 @@ import numpy as np
 import pandas as pd
 
 try:
-    from convert2.lib import chardet
-    from convert2.lib.rolex import rolex
-    from convert2.lib.six import string_types, binary_type
+    from convert2.packages import chardet
+    from convert2.packages.rolex import rolex
+    from convert2.packages.six import string_types, binary_type
     from convert2.util import extract_number_from_string
 except:
-    from .lib import chardet
-    from .lib.rolex import rolex
-    from .lib.six import string_types, binary_type
+    from .packages import chardet
+    from .packages.rolex import rolex
+    from .packages.six import string_types, binary_type
     from .util import extract_number_from_string
 
 

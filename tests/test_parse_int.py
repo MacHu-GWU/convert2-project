@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 
 from convert2 import any2int
-from convert2.lib.rolex import utc
+from convert2.packages.rolex import utc
 import pytest
 import numpy as np
 import pandas as pd

@@ -16,7 +16,7 @@ docfly = Docfly(
     package_name, 
     dst="source",
     ignore=[
-        "%s.lib" % package_name,
+        "%s.packages" % package_name,
         "%s.zzz_manual_install.py" % package_name,
     ]
 )
