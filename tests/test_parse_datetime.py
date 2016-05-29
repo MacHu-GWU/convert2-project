@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-from convert2.converter import any2datetime
+from convert2 import any2datetime
 from convert2.lib.rolex import utc
 from convert2.lib.six import PY3
 import pytest

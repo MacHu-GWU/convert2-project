@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 
 def extract_number_from_string(text):
-    """
+    """Take number like string out of text.
     """
     numberstr_list = list()
     chunks = list()

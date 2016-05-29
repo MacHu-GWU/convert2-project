@@ -1,8 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-
-from convert2.converter import any2int
+from convert2 import any2int
 from convert2.lib.rolex import utc
 import pytest
 import numpy as np
