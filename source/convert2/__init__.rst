@@ -2,13 +2,16 @@ convert2
 ========
 
 .. automodule:: convert2
-	:members:
+    :members:
 
-subpackage and modules
-----------------------
+sub packages and modules
+------------------------
 
 .. toctree::
    :maxdepth: 1
 
-	converter <converter>
-	util <util>
+    packages <packages/__init__>
+    converter <converter>
+    util <util>
+    zzz_manual_install <zzz_manual_install>
+    

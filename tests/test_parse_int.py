@@ -107,4 +107,5 @@ def test_parse_int():
 
 if __name__ == "__main__":
     import py
-    py.test.cmdline.main("--tb=native -s")
+    import os
+    py.test.cmdline.main("%s --tb=native -s" % os.path.basename(__file__))
