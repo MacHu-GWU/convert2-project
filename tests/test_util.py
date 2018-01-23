@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
+import pytest
 from convert2.util import extract_number_from_string
 
 
@@ -18,6 +19,7 @@ def test_extract_number_from_string():
 
 
 if __name__ == "__main__":
-    import py
     import os
-    py.test.cmdline.main("%s --tb=native -s" % os.path.basename(__file__))
+
+    basename = os.path.basename(__file__)
+    pytest.main([basename, "-s", "--tb=native"])

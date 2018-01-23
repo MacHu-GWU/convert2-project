@@ -1,12 +1,12 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-from convert2 import any2int
-from convert2.packages.rolex import utc
 import pytest
 import numpy as np
 import pandas as pd
-from datetime import datetime, date, timedelta
+from datetime import datetime, date
+from convert2 import any2int
+from convert2.pkg.rolex import utc
 
 
 def test_parse_int():
@@ -74,17 +74,18 @@ def test_parse_int():
         any2int("a1b")
     any2int.EXTRACT_NUMBER_FROM_TEXT = True
 
-    # datetime, np.datetime64, pd.tslib.Timestamp
+    # datetime, np.datetime64, pd.Timestamp
     assert any2int(datetime(1970, 1, 1, 0, 0, 1, tzinfo=utc)) == int_
+    assert any2int(datetime(1970, 1, 1, 0, 0, 1, 256, tzinfo=utc)) == int_
     assert any2int(np.datetime64("1970-01-01 00:00:01Z")) == int_
-    assert any2int(pd.tslib.Timestamp("1970-01-01 00:00:01Z")) == int_
+    assert any2int(pd.Timestamp("1970-01-01 00:00:01Z")) == int_
 
     assert isinstance(
         any2int(datetime(1970, 1, 1, 0, 0, 1, tzinfo=utc)), int) is True
     assert isinstance(
         any2int(np.datetime64("1970-01-01 00:00:01Z")), int) is True
     assert isinstance(
-        any2int(pd.tslib.Timestamp("1970-01-01 00:00:01Z")), int) is True
+        any2int(pd.Timestamp("1970-01-01 00:00:01Z")), int) is True
 
     # date
     assert any2int(date(1, 1, 1)) == int_
@@ -106,6 +107,7 @@ def test_parse_int():
 
 
 if __name__ == "__main__":
-    import py
     import os
-    py.test.cmdline.main("%s --tb=native -s" % os.path.basename(__file__))
+
+    basename = os.path.basename(__file__)
+    pytest.main([basename, "-s", "--tb=native"])

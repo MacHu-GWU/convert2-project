@@ -1,13 +1,11 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-from convert2 import any2date
-from convert2.packages.rolex import utc
-from convert2.packages.six import PY3
 import pytest
 import numpy as np
 import pandas as pd
-from datetime import datetime, date, timedelta
+from datetime import datetime, date
+from convert2 import any2date
 
 
 def test_parse_datetime():
@@ -33,7 +31,7 @@ def test_parse_datetime():
     # np.datetime64, pd.tslib.Timestamp
     assert any2date(np.datetime64("1970-01-01 00:00:00Z")) == date(1970, 1, 1)
     assert any2date(
-        pd.tslib.Timestamp("1970-01-01 00:00:00Z")) == date(1970, 1, 1)
+        pd.Timestamp("1970-01-01 00:00:00Z")) == date(1970, 1, 1)
     assert any2date(datetime(1970, 1, 1, 0, 0, 0)) == date(1970, 1, 1)
 
     # date

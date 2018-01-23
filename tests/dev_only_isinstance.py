@@ -6,11 +6,11 @@ Test isinstance(obj, type) behavior in between python naive, numpy type,
 pandas type.
 """
 
-from __future__ import print_function
-from datetime import datetime, date, timedelta
+import pytest
+from datetime import datetime
 import numpy as np
 import pandas as pd
-from convert2.packages.six import PY3, PY2
+from convert2.pkg.six import PY3, PY2
 
 
 def test_is_int():
@@ -85,5 +85,7 @@ def test_data_read_from_pandas():
 
 
 if __name__ == "__main__":
-    import py
-    py.test.cmdline.main("--tb=native -s")
+    import os
+
+    basename = os.path.basename(__file__)
+    pytest.main([basename, "-s", "--tb=native"])
